@@ -1,0 +1,18 @@
+.error404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    color: $primary-color;
+    font-size: 15em;
+    margin: 0;
+  }
+  h2 {
+    color: $primary-color;
+  }
+  a {
+    margin: 20px;
+    color: black;
+  }
+}

@@ -1,0 +1,14 @@
+.tags {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  p {
+    display: block;
+    background-color: $primary-color;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+    padding: 3px;
+    color: white;
+    padding: 5px 20px;
+  }
+}

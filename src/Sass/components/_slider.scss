@@ -1,0 +1,26 @@
+.sheet-slider {
+  position: relative;
+  .cover-image--hidden {
+    display: none;
+  }
+  .arrow {
+    position: absolute;
+    top: 30%;
+    color: white;
+    width: 5em;
+    height: 10em;
+    &-right {
+      right: 1rem;
+    }
+    &-left {
+      left: 1rem;
+    }
+  }
+  .active-slide {
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    color: white;
+  }
+}

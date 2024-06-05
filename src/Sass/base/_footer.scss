@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 10em;
+}
+
+#mention-footer {
+  width: 20%;
+  margin-top: 20px;
+}
+
+#logo-footer {
+  width: 10%;
+}
