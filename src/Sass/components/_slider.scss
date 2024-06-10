@@ -4,6 +4,7 @@
     display: none;
   }
   .arrow {
+    z-index: 2;
     position: absolute;
     top: 30%;
     color: white;
@@ -23,4 +24,10 @@
     left: 50%;
     color: white;
   }
+  .inactive {
+    display: none;
+  }
+}
+.cover-image {
+  z-index: 1;
 }

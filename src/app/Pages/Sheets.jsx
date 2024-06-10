@@ -1,15 +1,15 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import data from "../../data/annonces.json";
-import Tags from "../Part/Tags";
-import Dropdown from "../Part/Dropdown-menu/Dropdown";
-import Slider from "../Part/Slider";
-import Rating from "../Part/Rating";
+import Tags from "../Components/Tags";
+import Dropdown from "../Components/Dropdown";
+import Slider from "../Components/Slider";
+import Rating from "../Components/Rating";
+import Error404 from "./Error404";
 
 function Sheets() {
   const { id } = useParams();
   const [logement, setLogement] = useState({
-    id: "",
     cover: [],
     pictures: [],
     title: "",
@@ -23,8 +23,15 @@ function Sheets() {
 
   useEffect(() => {
     const selectLogement = data.find((item) => item.id === id);
-    setLogement(selectLogement);
+    if (selectLogement) {
+      setLogement(selectLogement);
+    }
   }, [id]);
+
+  if (logement.id === undefined) {
+    return <Error404 />;
+  }
+
   return (
     <div className="sheets">
       <Slider pictures={logement.pictures} />
@@ -44,7 +51,16 @@ function Sheets() {
       </div>
       <div className="dropdowns">
         <Dropdown name="Description" value={logement.description} />
-        <Dropdown name="Équipements" value={logement.equipments} />
+        <Dropdown
+          name="Équipements"
+          value={logement.equipments.map((item) => {
+            return (
+              <>
+                <li key={item}>{item}</li>
+              </>
+            );
+          })}
+        />
       </div>
     </div>
   );

@@ -16,27 +16,35 @@
     color: white;
     width: 100%;
     z-index: 2;
+    .toggle-icon {
+      .chev-up {
+        transition: all 400ms;
+        transform: rotate(0deg);
+      }
+      .chev-down {
+        transition: all 400ms;
+        transform: rotate(-180deg);
+      }
+    }
   }
   .dropdown-content {
+    display: none;
     min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: small;
     max-height: 40vh;
     overflow-y: scroll;
     scrollbar-width: none;
-    display: none;
     background-color: #f6f6f673;
     position: relative;
     top: -10px;
     z-index: 1;
-    //background-color: red;
     padding: 10px;
+  }
+  .content-closed {
+    animation: slide-up 300ms forwards;
   }
   .content-open {
     display: block;
-    p {
-      font-size: small;
-    }
+    animation: slide-down 500ms forwards;
   }
 }
