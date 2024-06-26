@@ -35,8 +35,7 @@
 @media screen and (max-width: $mobile-width) {
   .sheet-slider {
     .arrow {
-      max-height: 3em;
-      max-width: 1.5em;
+      font-size: 3em;
       top: 40%;
     }
     .active-slide {
