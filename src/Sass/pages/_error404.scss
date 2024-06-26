@@ -10,9 +10,26 @@
   }
   h2 {
     color: $primary-color;
+    text-align: center;
+    margin: 40px;
   }
   a {
-    margin: 20px;
+    margin: 100px 0px;
     color: black;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .error404 {
+    h1 {
+      font-size: 8em;
+    }
+    h2 {
+      font-size: medium;
+    }
+    a {
+      font-size: small;
+      margin: 60px;
+    }
   }
 }

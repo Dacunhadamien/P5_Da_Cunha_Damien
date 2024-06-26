@@ -35,32 +35,32 @@ function Sheets() {
   return (
     <div className="sheets">
       <Slider pictures={logement.pictures} />
-      <div className="title-location-host">
-        <div className="title-location">
-          <h1>{logement.title}</h1>
-          <p>{logement.location}</p>
+      <div className="infos">
+        <div className="title-location-tag-host-rating">
+          <div className="title-location-tag">
+            <div className="title-location">
+              <h1>{logement.title}</h1>
+              <p>{logement.location}</p>
+            </div>
+            <Tags tags={logement.tags} />
+          </div>
+          <div className="host-rating">
+            <div className="host">
+              <h2>{logement.host.name}</h2>
+              <img src={logement.host.picture} alt="Photographie portrait de l'hôte"></img>
+            </div>
+            <Rating rating={logement.rating} />
+          </div>
         </div>
-        <div className="host">
-          <h2>{logement.host.name}</h2>
-          <img src={logement.host.picture} alt="Photographie portrait de l'hôte"></img>
+        <div className="dropdowns">
+          <Dropdown name="Description" value={logement.description} />
+          <Dropdown
+            name="Équipements"
+            value={logement.equipments.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
+          />
         </div>
-      </div>
-      <div className="tags-rating">
-        <Tags tags={logement.tags} />
-        <Rating rating={logement.rating} />
-      </div>
-      <div className="dropdowns">
-        <Dropdown name="Description" value={logement.description} />
-        <Dropdown
-          name="Équipements"
-          value={logement.equipments.map((item) => {
-            return (
-              <>
-                <li key={item}>{item}</li>
-              </>
-            );
-          })}
-        />
       </div>
     </div>
   );

@@ -11,3 +11,13 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: $mobile-width) {
+  .home {
+    .gallery {
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+    }
+  }
+}

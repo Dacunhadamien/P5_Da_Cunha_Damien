@@ -3,12 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0;
   background-color: black;
   position: absolute;
   width: 100%;
   left: 0;
   height: 10em;
+  margin-top: auto;
 }
 
 #mention-footer {
@@ -18,4 +19,13 @@
 
 #logo-footer {
   width: 10%;
+}
+
+@media screen and (max-width: $mobile-width) {
+  #mention-footer {
+    width: 50%;
+  }
+  #logo-footer {
+    width: 40%;
+  }
 }

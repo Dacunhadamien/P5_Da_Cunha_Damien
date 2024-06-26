@@ -12,37 +12,92 @@
     width: 100%;
     margin: 20px 0;
   }
-  .title-location-host {
+  .infos {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 10%;
-  }
-  .host {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    h2 {
-      color: $primary-color;
-      font-size: large;
-      margin: 10px;
+    flex-direction: column;
+    .title-location-tag-host-rating {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+      .title-location-tag {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: 10%;
+        width: 50%;
+      }
     }
-    img {
-      border-radius: 100%;
-      height: 50%;
+    .host-rating {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      .rating {
+        display: flex;
+        justify-content: end;
+      }
+      .host {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        h2 {
+          color: $primary-color;
+          font-size: large;
+          margin: 10px;
+        }
+        img {
+          border-radius: 100%;
+          height: 50%;
+        }
+      }
+    }
+    .dropdowns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      width: 100%;
     }
   }
-  .tags-rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-  }
-  .dropdowns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
+}
+
+@media screen and (max-width: $mobile-width) {
+  .sheets {
+    .cover-image {
+      max-height: 16em;
+    }
+    .infos {
+      .title-location-tag-host-rating {
+        flex-direction: column;
+        .title-location-tag {
+          width: 100%;
+        }
+        .host-rating {
+          width: 100%;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          .rating {
+            width: 30%;
+          }
+          .host {
+            h2 {
+              font-size: small;
+            }
+            img {
+              height: 3em;
+            }
+          }
+        }
+      }
+      .dropdowns {
+        flex-direction: column;
+        .dropdown {
+          width: 100%;
+        }
+      }
+    }
   }
 }

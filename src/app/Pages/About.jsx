@@ -9,7 +9,7 @@ function About() {
       <Banner alt="Paysage de montagnes" src={bannerImage} />
       <div className="dropdowns-about">
         {data.map((item) => (
-          <Dropdown name={item.name} value={item.value} />
+          <Dropdown name={item.name} value={item.value} key={item.id} />
         ))}
       </div>
     </div>

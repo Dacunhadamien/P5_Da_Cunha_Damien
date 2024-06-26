@@ -4,8 +4,11 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+  #main-logo {
+    width: 10%;
+  }
   img {
-    width: 50%;
+    width: 100%;
   }
   nav a {
     padding: 20px;
@@ -16,6 +19,25 @@
     }
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .header {
+    #main-logo {
+      width: 40%;
+      padding: 0 10px;
+    }
+    nav {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+    }
+    nav a {
+      font-size: x-small;
+      text-transform: uppercase;
+      padding: 5px;
     }
   }
 }

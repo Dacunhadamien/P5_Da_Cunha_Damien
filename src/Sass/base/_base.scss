@@ -4,8 +4,16 @@
 
 body {
   padding: 0 45px;
+  display: flex;
+  flex-direction: column;
 }
 
 li {
   list-style-type: none;
+}
+
+@media screen and (max-width: $mobile-width) {
+  body {
+    padding: 0 10px;
+  }
 }
